@@ -1,0 +1,145 @@
+:root {
+    --primary: rgb(235, 150, 139);
+    --secondary:
+    --dark: black;
+    --light: white;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--dark);
+    background-color: var(--primary);
+    line-height: 1;
+}
+
+p {
+    margin: 0;
+}
+
+header {
+    padding: 15px 6% 15px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--primary)
+}
+
+header h1 {
+    color: var(--dark) font-size 4vw;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 5px 10px;
+    color: var();
+    margin-right: 10px;
+    background-size: auto;
+    background-position: auto;
+    transition: all;
+    font-size: 1.4rem;
+}
+
+nav a:hover {
+    background-size: 100% 100%;
+    color: var(--primary);
+}
+
+nav a:last-child {
+    margin-right: 0;
+}
+
+main {
+    margin-top: 20px;
+    margin-bottom: 45px;
+}
+
+.hero-banner {
+    width: 100%;
+    background: var(--primary);
+    background-size: cover;
+    background-position: center;
+    min-height: 30vh;
+    color: var(--light);
+    padding: 2% 6%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: right;
+}
+
+.hero-banner div {
+    flex: 0 0 90%;
+    width: 100%;
+}
+.page-wrapper {
+    max-width: 88%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-section {
+    margin: 25px 0;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.page-section>h2 {
+    border-right: none;
+    border-bottom: 4px solid var(--primary);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    text-align: left;
+    font-size: 7vw;
+}
+
+header nav {
+    justify-content: center;
+}
+
+header h1 {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 10vw;
+}
+
+.page-section>h2,
+.page-section>div {
+    flex: 0 0 100%;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .flex-item,
+    .flex-item:first-child {
+        flex-basis: 100%;
+    }
+
+    .flex-item:first-child {
+        min-height: 150px
+    }
+
+    .hero-banner {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .contact address {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
