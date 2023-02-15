@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <title>MealMate</title>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-800 h-screen">
+  <nav class="bg-gray-800 p-4 flex justify-between items-center">
+    <a href="./index.html"><img class="h-16" src="./assets/img/SaintOfMirren_a_simple_logo_with_two_capital_M_letters_a_knife__902b934f-4f5f-425e-b71f-faab6260f731.png"></a>
+    <div class="flex">
+      <a href="#" class="text-gray-200 mr-6">Home</a>
+      <a href="./meal.html" class="text-gray-200 mr-6">Meal Plan</a>
+    </div>
+  </nav>
+  <h1 class="text-4xl font-bold text-gray-200 text-center">MealMate</h1>
+  <div class="text-center text-gray-200 mx-10 mt-10 mb-10">
+    <p class="mb-5">
+      The Spoonacular Meal Planner and Notebook app is the perfect tool for
+      anyone looking to streamline their meal planning and keep track of their
+      favorite recipes and ingredients. The app allows you to generate a meal
+      plan, with the option to add your own ingredients and recipes to a
+      personal notebook. With its intuitive design, using the Spoonacular app
+      is a breeze! Simply select your preferred meals and ingredients, and let
+      the app do the rest.
+    </p>
+    <p>
+      The app also features a detailed information section for each item,
+      where you can view important badges, such as "gluten-free" or
+      "vegetarian", and get a closer look at the ingredients and nutritional
+      information. The notebook feature allows you to keep track of all your
+      favorite recipes and ingredients, making it easy to plan and prepare
+      meals in the future. The Spoonacular app is a one-stop-shop for all your
+      meal planning needs, making it the perfect tool for anyone looking to
+      streamline their meal preparation and stay organized.
+    </p>
+  </div>
+  <div class="container mx-auto mt-5">
+    <div class="flex flex-col md:flex-row">
+      <div class="w-full mx-0 md:mx-2 md:w-1/3 bg-blue-800 p-4">
+        <h2 class="text-xl font-bold mb-4 text-center text-gray-200">
+          Search
+        </h2>
+        <h3>Search by Grocery Product</h3>
+        <form action="" id="searchGroceryProductForm">
+          <input id="searchGroceryProductInput" type="text" class="w-full p-2 bg-gray-100 border border-black mt-1"
+            placeholder="Add a grocery product" />
+          <button class="bg-gray-400 text-white py-2 px-4 rounded border border-black mt-1 active:bg--gray-600 active:scale-90 transition-transform duration-90">
+            Search
+          </button>
+        </form>
+        <h3>Search by Ingredients (comma sep)</h3>
+        <form action="" id="byIngredientsForm">
+          <input id="byIngredientsInput" type="text" class="w-full p-2 bg-gray-100 border border-black mt-1"
+            placeholder="Add an ingredient" />
+          <button class="bg-gray-400 text-white py-2 px-4 rounded-lg border border-black mt-1 active:bg--gray-600 active:scale-90 transition-transform duration-90">
+            Search
+          </button>
+          <br />
+        </form>
+        <br />
+        <h3 class="text-xl font-bold mb-4 text-center text-gray-200">
+          Nearby Grocery Stores
+        </h3>
+        <div id="map" class="w-full mt-4 overflow-hidden bg-white rounded">
+          <!-- Add map here -->
+        </div>
+      </div>
+      <div class="w-full mx-0 md:mx-2 md:w-2/3 bg-blue-800 p-4">
+        <h3 class="text-xl font-bold mb-4 text-center text-gray-200">
+          Meals We Found For You
+        </h3>
+        <div id="searchResults" class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <!-- <div class="modal-overlay bg-black opacity-75"></div>
+    <div class="modal-container bg-white p-4 md:w-1/2 lg:w-1/3 mx-auto">
+      <img id="modal-img" src="" class="h-64 mx-auto" alt="Image" />
+      <h4 id="modal-header" class="text-xl font-bold mt-4"></h4>
+      <ul class="list-disc pl-5 mt-4"></ul>
+      <button class="bg-gray-800 text-white p-2 mt-4" onclick="closeModal()">
+        Close
+      </button>
+    </div> -->
+  </div>
+</body>
+<script src="./assets/js/index.js"></script>
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYNCDLPp5lDjmVzQk0Q3T3xDoqNyjVllY&libraries=places&callback=initMap"></script>
+
+</html>
