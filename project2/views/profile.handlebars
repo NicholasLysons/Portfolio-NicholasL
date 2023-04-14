@@ -1,0 +1,55 @@
+<div class="row" style="display:flex">
+  <div class="col-auto">
+    <h2>Welcome, {{name}}!</h2>
+  </div>
+</div>
+<div class="row" style="display:inline-block">
+<h2>Add to Inventory</h2>
+</div>
+<form class="form new-inventory-form">
+      <div class="form-group">
+        <label for="project-name">Food Item:</label>
+        <input class="form-input" type="text" id="inventory-name" name="inventory-name" />
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Add</button>
+      </div>
+    </form>
+
+<div class="inventory-list">
+{{#each inventories as |inv| }}
+<div class="row mb-4">
+  
+{{inv.name}}, {{User.name}}
+ <div class="col-md-4">
+        <button class="btn btn-sm btn-danger del-inv" data-id="{{inv.id}}">DELETE</button>
+      </div>
+</div>
+{{/each}}
+</div>
+<div class="row" style="display:inline-block">
+<h2>Add to Needs</h2>
+</div>
+<form class="form need-form">
+      <div class="form-group">
+        <label for="project-name">Food Item:</label>
+        <input class="form-input" type="text" id="need-name" name="need-name" />
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Add</button>
+      </div>
+    </form>
+
+<div class="needs-list">
+{{#each needs as |need| }}
+<div class="row mb-4">
+  
+{{need.name}}, {{User.name}}
+ <div class="col-md-4">
+        <button class="btn btn-sm btn-danger del-need" data-id="{{need.id}}">DELETE</button>
+      </div>
+</div>
+{{/each}}
+</div>
+
+<script src="./js/profile.js"></script>

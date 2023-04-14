@@ -1,0 +1,66 @@
+/* import open-props for css */
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
+
+header {
+    background-image: var(--gradient-30);
+    background-size: cover;
+    text-align: center;
+
+}
+
+title {
+    color: var(--grey-12);
+    text-align: center;
+    background-size: cover;
+}
+
+h1 {
+   color: var(--gray-1);
+   background-color: var(--gray-12);
+   max-inline-size: var(--size-header-3);
+   text-align: center;
+}
+
+h2 {
+    color: var(--gray-1);
+    background-color: var(--gray-12);
+    max-inline-size: var(--size-header-2);
+    text-align: center;
+}
+
+nav {
+ color: var(--gray-12);
+ text-align: center;
+}
+
+.div {
+    color: var(--gray-12);
+    text-align: center;
+}
+
+/* unvisited link */
+a:link {
+    color: var(--orange-1);
+  }
+  
+  /* visited link */
+  a:visited {
+    color: var(--orange-1);
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: var(--orange-1);
+  }
+  
+  /* selected link */
+  a:active {
+    color: var(--orange-1);
+}
+
+.button {
+    color: var(--orange-1)
+
+}
+
